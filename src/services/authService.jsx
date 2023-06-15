@@ -16,7 +16,7 @@ export const validateEmail=(email)=>{
 export const registerUser=async(userData)=>{
     try {
         
-        const res = await axios.post(`${BACKEND_URL}v1/api/users/register`,userData)// {withCredentials:true} because as we login we receive a token back from the post request so save it we use withCredentails but no need to write it after every request as we declared it globally in App.js
+        const res = await axios.post(`${BACKEND_URL}/v1/api/users/register`,userData)// {withCredentials:true} because as we login we receive a token back from the post request so save it we use withCredentails but no need to write it after every request as we declared it globally in App.js
         toast.success("registered suxsexfully")
         // console.log(res.data)
         return res.data
@@ -32,7 +32,7 @@ export const registerUser=async(userData)=>{
 export const loginUser=async(userData)=>{
     try {
 
-        const res = await axios.post(`${BACKEND_URL}v1/api/users/login`,userData)//because as we register we receive a token back from the post request so save it we use withCredentails
+        const res = await axios.post(`${BACKEND_URL}/v1/api/users/login`,userData)//because as we register we receive a token back from the post request so save it we use withCredentails
         // console.log(res.data)
         if(res.status==="OK"){
             toast.success("login suxsexfully")
@@ -48,7 +48,7 @@ export const loginUser=async(userData)=>{
 //Logout User
 export const logoutUser=async()=>{
     try{
-        await axios.get(`${BACKEND_URL}v1/api/users/logout`)
+        await axios.get(`${BACKEND_URL}/v1/api/users/logout`)
 
     }catch (error){
         toast.error(error.response.data.message);
@@ -60,7 +60,7 @@ export const logoutUser=async()=>{
 export const forgotPassword=async(userData)=>{
     try{
         // console.log(userData)
-        const res=await axios.post(`${BACKEND_URL}v1/api/users/forgotpassword`,userData)
+        const res=await axios.post(`${BACKEND_URL}/v1/api/users/forgotpassword`,userData)
         // console.log(res)
         toast.success(res.data.message)
 
@@ -73,7 +73,7 @@ export const forgotPassword=async(userData)=>{
 //Reset password
 export const resetPassword=async(userData, resetToken)=>{
     try{
-        const res=await axios.put(`${BACKEND_URL}v1/api/users/resetPassword/${resetToken}`,userData)
+        const res=await axios.put(`${BACKEND_URL}/v1/api/users/resetPassword/${resetToken}`,userData)
         toast.success(res.data.message)
         return res.data
 
@@ -87,7 +87,7 @@ export const resetPassword=async(userData, resetToken)=>{
 //get login status
 export const getLoginStatus=async()=>{
     try{
-        const res=await axios.get(`${BACKEND_URL}v1/api/users/loggedinstatus`)
+        const res=await axios.get(`${BACKEND_URL}/v1/api/users/loggedinstatus`)
         toast.success(res.data.message)
         return res.data
 
@@ -101,7 +101,7 @@ export const getLoginStatus=async()=>{
 //get userDetails
 export const getUser=async()=>{
     try {
-        const res= await axios.get(`${BACKEND_URL}v1/api/users/getuser`)
+        const res= await axios.get(`${BACKEND_URL}/v1/api/users/getuser`)
         toast.success(res.data.message)
         return res.data
     } catch (error) {
@@ -114,7 +114,7 @@ export const getUser=async()=>{
 //update user Profile
 export const updateUser=async(formData)=>{
     try {
-        const res= await axios.patch(`${BACKEND_URL}v1/api/users/updateuser`,formData)
+        const res= await axios.patch(`${BACKEND_URL}/v1/api/users/updateuser`,formData)
         toast.success(res.data.message)
         return res.data
     } catch (error) {
@@ -125,7 +125,7 @@ export const updateUser=async(formData)=>{
 
 export const changeUserPassword=async(formData)=>{
     try {
-        const res= await axios.patch(`${BACKEND_URL}v1/api/users/changepassword`,formData)
+        const res= await axios.patch(`${BACKEND_URL}/v1/api/users/changepassword`,formData)
         toast.success(res.data.message)
         return res.data
     } catch (error) {
