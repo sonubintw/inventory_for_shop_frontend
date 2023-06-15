@@ -6,6 +6,7 @@ import {toast} from "react-toastify"
 
 // const BACKEND_URL=`http://localhost:5000`//checking purpose
 const BACKEND_URL=process.env.REACT_APP_BACKEND_URL
+
 //custom made function to check whether the email is valid or !valid
 export const validateEmail=(email)=>{
     //match() is a regex function
