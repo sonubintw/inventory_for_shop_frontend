@@ -85,10 +85,10 @@ export const resetPassword=async(userData, resetToken)=>{
 }
 
 
-//get login status
+//get loginstatus
 export const getLoginStatus=async()=>{
     try{
-        const res=await axios.get(`${process.env.REACT_APP_BACKEND_URL}/v1/api/users/loggedinstatus`)
+        const res=await axios.get(`${process.env.REACT_APP_BACKEND_URL}v1/api/users/loggedinstatus`)
         toast.success(res.data.message)
         return res.data
 
