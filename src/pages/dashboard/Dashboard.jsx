@@ -21,9 +21,7 @@ const Dashboard = () => {
       dispatch(getAllProduct())
     }
     
-    if(isError){
-      console.log(message);
-    }
+    
   }, [isLoggedin,isError,message,dispatch]);
 
 
