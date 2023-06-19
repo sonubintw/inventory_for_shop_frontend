@@ -1,4 +1,19 @@
+# Deployed link
+
+FRONTEND-https://inventory-for-shop-4k1onxnh5-sonubintw.vercel.app/
+
+BACKEND-https://inventory-shop-api.onrender.com
+
+
 # Getting Started with Create React App
+# screenshots
+![Screenshot 2023-06-16 163617](https://github.com/sonubintw/inventory_for_shop_frontend/assets/100895916/1ad8748b-c13c-4392-a536-3f8fab73f7e0)
+
+![Screenshot 2023-06-16 163718](https://github.com/sonubintw/inventory_for_shop_frontend/assets/100895916/c09e1b52-3146-46ca-a73c-1edf1f9c52c2)
+
+![Screenshot 2023-06-16 163804](https://github.com/sonubintw/inventory_for_shop_frontend/assets/100895916/8765f8a6-c95e-416d-bfd2-c1d8e6590bf2)
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
